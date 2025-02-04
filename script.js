@@ -1,17 +1,17 @@
 ///// 1 Задание /////
 
 function hasEvenNumber(arr) {
-
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] % 2 === 0) {
-     return true
+      return true;
     }
   }
 
-  return foundEven;
+  return false;
 }
 
-console.log(hasEvenNumber([1, 3, 4, 5])); // Ожидается: true
+console.log(hasEvenNumber([1, 3, 5])); // Ожидается: false
+console.log(hasEvenNumber([1, 2, 3])); // Ожидается: true
 
 ///// 2 Задание /////
 
@@ -30,15 +30,15 @@ console.log(calculateAverage([2, 4, 6])); // Ожидается: 4
 ///// 3 Задание /////
 
 function findLargestNumber(arr) {
-    if (arr.length === 0) {
-        return undefined;
-    }
+  if (arr.length === 0) {
+    return undefined;
+  }
 
   let largest = arr[0];
 
   for (let i = 1; i < arr.length; i++) {
-    if (arr[i] > largest) {
-      largest = arr[i];
+    if (!arr || !arr.length) {
+      return null;
     }
   }
 
