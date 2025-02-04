@@ -30,15 +30,15 @@ console.log(calculateAverage([2, 4, 6])); // Ожидается: 4
 ///// 3 Задание /////
 
 function findLargestNumber(arr) {
-  if (arr.length === 0) {
-    return undefined;
+  if (!arr || !arr.length) {
+    return null;
   }
 
   let largest = arr[0];
 
   for (let i = 1; i < arr.length; i++) {
-    if (!arr || !arr.length) {
-      return null;
+    if (arr[i] > largest) {
+      largest = arr[i];
     }
   }
 
